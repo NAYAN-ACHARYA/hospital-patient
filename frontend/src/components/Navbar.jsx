@@ -37,29 +37,26 @@ const Navbar = () => {
         </div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            <Link to={"/"} onClick={() => setShow(!show)}>
-              Home
-            </Link>
-            <Link to={"/appointment"} onClick={() => setShow(!show)}>
-              Appointment
-            </Link>
-            <Link to={"/about"} onClick={() => setShow(!show)}>
-              About Us
-            </Link>
+            <Link to={"/"} onClick={() => setShow(!show)}>Home</Link>
+            <Link to={"/appointment"} onClick={() => setShow(!show)}>Appointment</Link>
+            <Link to={"/about"} onClick={() => setShow(!show)}>About Us</Link>
           </div>
           {isAuthenticated ? (
             <button className="logoutBtn btn" onClick={handleLogout}>
               LOGOUT
             </button>
-          ) : (<>
-            <button className="loginBtn btn" onClick={goToLogin} >
-              LOGIN as Pateint
-            </button>
-            <button className="loginBtn btn" onClick={() => window.location.href = "https://hospital-admin-ht2k.onrender.com"}>
-  LOGIN as ADMIN
-</button>
-
-           </>
+          ) : (
+            <>
+              <button className="loginBtn btn" onClick={goToLogin}>
+                LOGIN as Patient
+              </button>
+              <button
+                className="loginBtn btn"
+                onClick={() => window.location.href = "https://hospital-admin-ht2k.onrender.com"}
+              >
+                LOGIN as ADMIN
+              </button>
+            </>
           )}
         </div>
         <div className="hamburger" onClick={() => setShow(!show)}>
