@@ -55,7 +55,7 @@ const Navbar = () => {
             <button className="loginBtn btn" onClick={goToLogin} >
               LOGIN as Pateint
             </button>
-            <button className="loginBtn btn" onClick={() => window.location.href = "http://localhost:5174"}>
+            <button className="loginBtn btn" onClick={() => window.location.href = "https://hospital-admin-ht2k.onrender.com"}>
   LOGIN as ADMIN
 </button>
 
